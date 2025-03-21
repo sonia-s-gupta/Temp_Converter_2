@@ -5,9 +5,8 @@
  * @param {number} f temperature in °F
  * @returns {number} temperature in °C
  */
-function convertToCelsius(f) {
-  return ((f - 32) * 5) / 9;
-}
+const convertToCelsius = (f) =>
+  ((f - 32) * 5) / 9;
 
 /**
  * | Temperature | Description |
@@ -22,7 +21,7 @@ function convertToCelsius(f) {
  * @returns {string} the description from the table above corresponding to
  * the given Fahrenheit temperature `f`
  */
-function createMessage(f) {
+const createMessage = (f) => {
   if (f < 32) {
     return "very cold";
     } else if (f < 64) {
@@ -33,13 +32,13 @@ function createMessage(f) {
     return "hot";
     }
     return "very hot";
-  }
+};
 
 /**
  * @param {number} limit
  * @returns {number} a random integer in the range [0, `limit`)
  */
-function getRandomInt(limit) {
+const getRandomInt = (limit) => {
   return Math.floor(Math.random() * limit);
 }
 
